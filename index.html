@@ -1,27 +1,60 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>NEXUS // Future Interface</title><meta name="description" content="NEXUS — an interactive portal for ideas, experiments and digital worlds.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUPERLAB — Generatore di superpoteri</title>
+  <meta name="description" content="Scopri il tuo superpotere con il generatore AI di SUPERLAB.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="noise"></div><div class="grid"></div>
-<header><a class="logo" href="#top"><span>N</span>EXUS</a><nav><a href="#world">WORLD</a><a href="#systems">SYSTEMS</a><a href="#launch">LAUNCH</a></nav><button class="menu" aria-label="menu">☰</button></header>
-<main id="top">
-<section class="hero">
-<div class="hero-copy"><p class="eyebrow"><i></i> SYSTEM ONLINE · 2026</p><h1>BUILD THE<br><strong>IMPOSSIBLE.</strong></h1><p class="lead">A digital playground where experiments become worlds. Explore the interface, trigger the core, and discover what happens next.</p>
-<div class="actions"><a class="btn primary" href="#launch">ENTER NEXUS <span>↗</span></a><button class="btn ghost" id="pulse">ACTIVATE CORE</button></div>
-<div class="stats"><div><b id="energy">87</b><small>ENERGY</small></div><div><b>∞</b><small>PATHS</small></div><div><b>24/7</b><small>ONLINE</small></div></div></div>
-<div class="orb-wrap"><div class="orb"><div class="orb-ring r1"></div><div class="orb-ring r2"></div><div class="orb-core"></div><span class="orb-label">NEXUS<br>CORE</span></div><div class="orbit-dot d1"></div><div class="orbit-dot d2"></div></div>
-</section>
-<section id="world" class="section"><div class="section-head"><p class="eyebrow">01 / THE WORLD</p><h2>NOT A WEBSITE.<br><span>A PORTAL.</span></h2></div>
-<div class="cards"><article><span>01</span><h3>EXPLORE</h3><p>Move through a living interface built around discovery, motion and unexpected details.</p></article><article><span>02</span><h3>CREATE</h3><p>Turn ideas into prototypes, games, stories and experiments without leaving the portal.</p></article><article><span>03</span><h3>CONNECT</h3><p>Every module is designed to feel like part of one larger digital universe.</p></article></div></section>
-<section id="systems" class="section systems"><div><p class="eyebrow">02 / SYSTEMS</p><h2>CORE<br><span>CAPABILITIES</span></h2></div><div class="system-list"><div><b>01</b><strong>INTERACTIVE UI</strong><em>READY</em></div><div><b>02</b><strong>REAL-TIME MOTION</strong><em>READY</em></div><div><b>03</b><strong>EXPERIMENT ENGINE</strong><em>ONLINE</em></div><div><b>04</b><strong>UNKNOWN MODULE</strong><em>LOCKED</em></div></div></section>
-<section id="launch" class="launch"><p class="eyebrow">03 / LAUNCH</p><h2>YOUR NEXT<br><span>WORLD STARTS HERE.</span></h2><button class="launch-btn" id="launchBtn">INITIALIZE <span>→</span></button><p id="status">Awaiting command.</p></section>
-</main>
-<footer><span>NEXUS © 2026</span><span>DESIGNED FOR CURIOSITY</span></footer>
-<script src="script.js"></script>
-</body></html>
+  <div class="page-glow"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Superlab home"><span class="brand-mark">✦</span> SUPERLAB</a>
+    <nav aria-label="Navigazione principale"><a href="#generatore">Generatore</a><a href="#come-funziona">Come funziona</a><a href="#archivio">Archivio</a></nav>
+    <button class="profile-button" type="button" aria-label="Apri profilo"><span></span> Il mio profilo</button>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="generatore">
+      <div class="hero-copy">
+        <p class="kicker"><i></i> POTENZIATO DALL'AI</p>
+        <h1>Scopri il tuo<br><em>superpotere.</em></h1>
+        <p class="intro">Raccontaci una piccola cosa di te. Il nostro motore AI la trasformerà in un potere unico, dal livello 1 al livello 50.</p>
+        <div class="prompt-box">
+          <label for="power-prompt">In questo momento mi sento...</label>
+          <div class="prompt-row"><input id="power-prompt" maxlength="90" placeholder="es. curioso, pronto a cambiare il mondo"><button id="generate" type="button">Genera <span>→</span></button></div>
+          <p class="hint">Prova con un'emozione, un sogno o una tua qualità.</p>
+        </div>
+        <div class="social-proof"><div class="avatars"><span>F</span><span>G</span><span>A</span><span>+</span></div><p>Già <strong>12.438 persone</strong> hanno scoperto il loro potere oggi.</p></div>
+      </div>
+
+      <div class="power-stage" aria-live="polite">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="star star-one">✦</div><div class="star star-two">✦</div>
+        <article class="power-card" id="power-card">
+          <div class="card-top"><span id="power-kind">POTERE IN ATTESA</span><span class="spark">✦</span></div>
+          <div class="power-icon" id="power-icon">?</div>
+          <p class="level-label">LIVELLO <b id="power-level">--</b> <small>/ 50</small></p>
+          <h2 id="power-name">La tua energia<br>ti sta aspettando</h2>
+          <p class="power-description" id="power-description">Inserisci una scintilla di te e premi genera.</p>
+          <div class="meter"><span id="meter-fill"></span></div>
+          <div class="card-footer"><span id="rarity">PRONTO A CREARE</span><span id="power-code">SL-000</span></div>
+        </article>
+        <p class="stage-caption">Ogni potere è irripetibile <span>✦</span></p>
+      </div>
+    </section>
+
+    <section class="how" id="come-funziona">
+      <div class="section-title"><p class="kicker"><i></i> IL PROCESSO</p><h2>Da una scintilla,<br><em>qualcosa di straordinario.</em></h2></div>
+      <div class="steps"><article><span>01</span><h3>Raccontati</h3><p>Una parola, un pensiero, un piccolo frammento di te.</p></article><article><span>02</span><h3>L'AI immagina</h3><p>Analizza la tua energia e trova la combinazione perfetta.</p></article><article><span>03</span><h3>Diventa leggenda</h3><p>Ricevi il tuo potere, il suo livello e la sua storia.</p></article></div>
+    </section>
+
+    <section class="archive" id="archivio"><p class="kicker"><i></i> DAL LABORATORIO</p><div class="archive-heading"><h2>Potere del giorno:<br><em>Eco del Domani</em></h2><p>Chi lo possiede riesce a sentire le conseguenze gentili delle proprie scelte, un attimo prima di compierle.</p></div><div class="daily-level"><span>41</span><p>Livello<br>straordinario</p><i>✦</i></div></section>
+  </main>
+  <footer><a class="brand" href="#top"><span class="brand-mark">✦</span> SUPERLAB</a><p>Creato per chi non ha mai smesso di immaginare.</p><span>© 2026 SUPERLAB</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
